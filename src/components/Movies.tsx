@@ -1,23 +1,17 @@
 import React from "react";
+import Card from "./card/Card";
 interface MoviesProps {
   results: [];
 }
 const Movies: React.FC<MoviesProps> = ({ results }) => {
   console.log(results);
+
   return (
-    <>
-      {results.map((item: any, index) => (
-        <div key={index}>
-          <h1>
-            {item.original_title
-              ? item.original_title
-              : item.original_name
-              ? item.original_name
-              : item.title}
-          </h1>
-        </div>
+    <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 max-w-6xl mx-auto py-4">
+      {results.map((item, index) => (
+        <Card key={index} item={item} />
       ))}
-    </>
+    </div>
   );
 };
 
