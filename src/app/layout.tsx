@@ -23,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Provider>
           <Header />
+
           <Navbar />
           <SearchBar />
           {children}
