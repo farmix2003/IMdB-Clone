@@ -2,7 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 interface MoviePageId {
-  params: any;
+  params: {
+    id: number;
+  };
 }
 const MoviePage: React.FC<MoviePageId> = async ({ params }) => {
   const movieId = params.id;

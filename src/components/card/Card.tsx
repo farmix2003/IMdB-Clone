@@ -2,8 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
+interface MovieItem {
+  id: number;
+  backdrop_path?: string | null;
+  poster_path?: string | null;
+  overview: string;
+  original_title?: string;
+  original_name?: string;
+  title?: string;
+  release_date?: string;
+  first_air_date?: string;
+  vote_count: number;
+}
+
 interface MoviesCard {
-  item: any;
+  item: MovieItem;
 }
 const Card: React.FC<MoviesCard> = ({ item }) => {
   return (
